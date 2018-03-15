@@ -1,0 +1,30 @@
+void reverse2(){
+                         node *temp;
+                         node *curr;
+                         node *prev;
+                         prev= NULL;
+                         temp = head;
+                         curr =head;
+                         if(head!=NULL){
+                         while(temp!=NULL){
+                         if(curr == head){
+                                 temp = curr->next;
+                                 curr->next = NULL;
+                                 prev = curr;
+                                 curr = temp;
+                                 temp = curr->next;
+                                 curr->next = prev;
+                                 }
+                        else{
+                                 prev = curr;
+                                 curr = temp;
+                                 temp = curr->next;
+                                 curr->next = prev;
+                                 
+                                 }
+                        }head = curr;
+               }  
+               }            
+                                
+                         
+            
